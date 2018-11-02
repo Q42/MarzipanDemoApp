@@ -87,7 +87,8 @@ To create a nice macOS-style segmented control in the window toolbar, we need to
 2. Add new Objective-C .h and .m files to your project and include the header in your Swift code via a Briding header
 3. In the header file, include the private APIs from UIKitCore you which to use (see [MarzipanHelper.h](MarzipanDemoApp/MarzipanHelper.h))
 4. In the implementation file, use those APIs (see [MarzipanHelper.m](MarzipanDemoApp/MarzipanHelper.m))
-5. Add the private classes used to the linker flags, to weak link them: ![Other linker flags](images/linker-flags.png)
+5. Add the private classes used to the linker flags, to weak link them: ![Other linker flags](images/linker-flags.png). 
+   Example: `-Wl,-U,_OBJC_CLASS_$__UIWindowToolbarController`
 
 For more details, read Peter Steinberger's post on [becoming a better Mac citizen](https://pspdfkit.com/blog/2018/porting-ios-apps-to-mac-marzipan-iosmac-uikit-appkit/#become-a-better-mac-citizen), or see the example code in this repository.
 
